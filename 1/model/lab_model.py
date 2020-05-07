@@ -36,6 +36,7 @@ class LabModel:
         # self._processor = Processor(ExponentialGenerator(exp_lambda))
 
         ##################################
+        print(a,b, exp_lambda) 
         self._generator = RequestGenerator(ExponentialGenerator(exp_lambda))
         self._processor = Processor(NormalGenerator(a, b))
 

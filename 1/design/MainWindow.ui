@@ -95,7 +95,7 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="hLayoutServiceReqMuInt" stretch="2,1">
+      <!-- <layout class="QHBoxLayout" name="hLayoutServiceReqMuInt" stretch="2,1">
        <item>
         <widget class="QLabel" name="labelServiceReqMuInt">
          <property name="text">
@@ -122,7 +122,7 @@
          </property>
         </widget>
        </item>
-      </layout>
+      </layout> -->
      </item>
      <item>
       <layout class="QHBoxLayout" name="hLayoutServiceReqMuTime" stretch="2,1">
