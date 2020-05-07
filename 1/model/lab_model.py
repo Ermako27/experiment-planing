@@ -1,4 +1,4 @@
-from model.generator import RequestGenerator, ExponentialGenerator, NormalGenerator
+from model.generator import RequestGenerator, ExponentialGenerator, NormalGenerator, UniformGenerator
 from utility.lab_observer import LabObserver
 from model.processor import Processor
 
@@ -36,9 +36,9 @@ class LabModel:
         # self._processor = Processor(ExponentialGenerator(exp_lambda))
 
         ##################################
-        print(a,b, exp_lambda) 
+        # print(a,b, exp_lambda) 
         self._generator = RequestGenerator(ExponentialGenerator(exp_lambda))
-        self._processor = Processor(NormalGenerator(a, b))
+        self._processor = Processor(UniformGenerator(a, b))
 
         self._generator.add_receiver(self._processor)
 

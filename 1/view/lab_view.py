@@ -27,10 +27,10 @@ class LabView(QMainWindow, LabObserver, ABC, metaclass=LabMeta):
         # self.ui.dblSpinBoxServiceReqMuInt.valueChanged.connect(self.v_controller.srcReqMuIntChange)
         # self.ui.edgeB.valueChanged.connect(self.v_controller.srcReqMuTimeChange)
 
-        #self.canvas = LabCanvas(self.get_figure([], []))
-        #self.nav_bar = NavigationToolbar2QT(self.canvas, self.ui.widgetPlot)
-        #self.ui.vLayoutPlot.addWidget(self.canvas)
-        #self.ui.vLayoutPlot.addWidget(self.nav_bar)
+        # self.canvas = LabCanvas(self.get_figure([], []))
+        # self.nav_bar = NavigationToolbar2QT(self.canvas, self.ui.widgetPlot)
+        # self.ui.vLayoutPlot.addWidget(self.canvas)
+        # self.ui.vLayoutPlot.addWidget(self.nav_bar)
 
         self.t_list = list()
         self.load_list = list()
@@ -81,15 +81,17 @@ class LabView(QMainWindow, LabObserver, ABC, metaclass=LabMeta):
         #self.ui.statusbar.showMessage(f'Результат модели: {self.v_controller.c_coefficient_model.function(numpy.array(x))}')
 
         #ЗДЕСЬ РАСКОМЕНТЬ ЧТОБЫ БЫЛ ГРАФИК
-        #self.update_image()
+        # self.update_image()
+        # print(self.t_list, self.load_list)
+        self.get_figure(self.load_list, self.t_list);
 
     def update_image(self):
-        #self.ui.vLayoutPlot.removeWidget(self.canvas)
-        #self.ui.vLayoutPlot.removeWidget(self.nav_bar)
+        self.ui.vLayoutPlot.removeWidget(self.canvas)
+        self.ui.vLayoutPlot.removeWidget(self.nav_bar)
         self.canvas = LabCanvas(self.get_figure(self.load_list, self.t_list))
-        #self.nav_bar = NavigationToolbar2QT(self.canvas, self.ui.widgetPlot)
-        #self.ui.vLayoutPlot.addWidget(self.canvas)
-        #self.ui.vLayoutPlot.addWidget(self.nav_bar)
+        # self.nav_bar = NavigationToolbar2QT(self.canvas, self.ui.widgetPlot)
+        self.ui.vLayoutPlot.addWidget(self.canvas)
+        self.ui.vLayoutPlot.addWidget(self.nav_bar)
 
     def get_figure(self, x, y):
         from matplotlib import pyplot
@@ -101,8 +103,8 @@ class LabView(QMainWindow, LabObserver, ABC, metaclass=LabMeta):
         axes.plot(x, y)
         axes.grid(True)
 
-        #fig.savefig('grafek4.png', dpi=100)
-        #fig.show()
-        #pyplot.show()
+        fig.savefig('grafek4.png', dpi=100)
+        fig.show()
+        pyplot.show()
 
         return fig

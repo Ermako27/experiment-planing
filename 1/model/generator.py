@@ -17,6 +17,15 @@ class ExponentialGenerator(BaseGenerator):
     def next(self) -> float:
         return random.exponential(self._lambda)
 
+class UniformGenerator(BaseGenerator):
+    def __init__(self, a, b):
+        if not 0 <= a <= b:
+            raise ValueError('Параметры должны удовлетворять условию 0 <= a <= b')
+        self._a = a
+        self._b = b
+
+    def next(self):
+        return random.uniform(self._a, self._b)
 
 class NormalGenerator(BaseGenerator):
     def __init__(self, sigma: float, mu: float):
