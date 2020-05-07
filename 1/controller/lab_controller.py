@@ -26,7 +26,7 @@ class LabController:
     def srcReqMuIntChange(self, value: float):
         if value != 0.0:
             value = 1 / value
-        self.c_view.ui.dblSpinBoxServiceReqMuTime.setValue(value)
+        self.c_view.ui.edgeB.setValue(value)
 
     def srcReqMuTimeChange(self, value: float):
         if value != 0.0:
@@ -45,8 +45,8 @@ class LabController:
         self._set_theory_results()
 
         self.c_model.exp_lambda = self.c_view.ui.dblSpinBoxSrcReqLambdaTime.value()
-        self.c_model.a = self.c_view.ui.dblSpinBoxServiceReqSigma.value()
-        self.c_model.b = self.c_view.ui.dblSpinBoxServiceReqMuTime.value()
+        self.c_model.a = self.c_view.ui.edgeA.value()
+        self.c_model.b = self.c_view.ui.edgeB.value()
         self.c_model.count_request = self.c_view.ui.spinBoxSettingsCount.value()
 
         self.c_model.notify_observers()

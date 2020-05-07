@@ -25,7 +25,7 @@ class LabView(QMainWindow, LabObserver, ABC, metaclass=LabMeta):
         # self.ui.dblSpinBoxSrcReqLambdaInt.valueChanged.connect(self.v_controller.srcReqLambdaIntChange)
         # self.ui.dblSpinBoxSrcReqLambdaTime.valueChanged.connect(self.v_controller.srcReqLambdaTimeChange)
         # self.ui.dblSpinBoxServiceReqMuInt.valueChanged.connect(self.v_controller.srcReqMuIntChange)
-        # self.ui.dblSpinBoxServiceReqMuTime.valueChanged.connect(self.v_controller.srcReqMuTimeChange)
+        # self.ui.edgeB.valueChanged.connect(self.v_controller.srcReqMuTimeChange)
 
         #self.canvas = LabCanvas(self.get_figure([], []))
         #self.nav_bar = NavigationToolbar2QT(self.canvas, self.ui.widgetPlot)
@@ -69,7 +69,7 @@ class LabView(QMainWindow, LabObserver, ABC, metaclass=LabMeta):
         #     d = self.ui.dblSpinBoxLevelsVarMuTo.value() - self.ui.dblSpinBoxLevelsVarMuFrom.value()
         #     x[2] = (self.ui.dblSpinBoxServiceReqMuInt.value() - self.ui.dblSpinBoxLevelsVarMuFrom.value()) * 2 / d - 1
         #     d = self.ui.dblSpinBoxLevelsVarSigmaTo.value() - self.ui.dblSpinBoxLevelsVarSigmaFrom.value()
-        #     x[3] = (self.ui.dblSpinBoxServiceReqSigma.value() - self.ui.dblSpinBoxLevelsVarSigmaFrom.value()) * 2 / d - 1
+        #     x[3] = (self.ui.edgeA.value() - self.ui.dblSpinBoxLevelsVarSigmaFrom.value()) * 2 / d - 1
         #     x[4] = x[1] * x[2]
         #     x[5] = x[1] * x[3]
         #     x[6] = x[2] * x[3]

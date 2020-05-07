@@ -77,7 +77,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="dblSpinBoxServiceReqSigma">
+        <widget class="QDoubleSpinBox" name="edgeA">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
@@ -137,7 +137,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="dblSpinBoxServiceReqMuTime">
+        <widget class="QDoubleSpinBox" name="edgeB">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
