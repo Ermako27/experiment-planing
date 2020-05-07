@@ -13,33 +13,34 @@ class LabController:
 
         self.c_view.show()
 
-    def srcReqLambdaIntChange(self, value: float):
-        if value != 0.0:
-            value = 1 / value
-        self.c_view.ui.dblSpinBoxSrcReqLambdaTime.setValue(value)
+    # def srcReqLambdaIntChange(self, value: float):
+    #     if value != 0.0:
+    #         value = 1 / value
+    #     self.c_view.ui.dblSpinBoxSrcReqLambdaTime.setValue(value)
 
-    def srcReqLambdaTimeChange(self, value: float):
-        if value != 0.0:
-            value = 1 / value
-        self.c_view.ui.dblSpinBoxSrcReqLambdaInt.setValue(value)
+    # def srcReqLambdaTimeChange(self, value: float):
+    #     if value != 0.0:
+    #         value = 1 / value
+    #     self.c_view.ui.dblSpinBoxSrcReqLambdaInt.setValue(value)
 
-    def srcReqMuIntChange(self, value: float):
-        if value != 0.0:
-            value = 1 / value
-        self.c_view.ui.edgeB.setValue(value)
+    # def srcReqMuIntChange(self, value: float):
+    #     if value != 0.0:
+    #         value = 1 / value
+    #     self.c_view.ui.edgeB.setValue(value)
 
-    def srcReqMuTimeChange(self, value: float):
-        if value != 0.0:
-            value = 1 / value
-        self.c_view.ui.dblSpinBoxServiceReqMuInt.setValue(value)
+    # def srcReqMuTimeChange(self, value: float):
+    #     if value != 0.0:
+    #         value = 1 / value
+    #     self.c_view.ui.dblSpinBoxServiceReqMuInt.setValue(value)
 
     def _set_theory_results(self):
-        self.c_view.ui.dblSpinBoxResultIntensitySrcTheory.setValue(
-            self.c_view.ui.dblSpinBoxSrcReqLambdaInt.value())
-        self.c_view.ui.dblSpinBoxResultsIntensityServiceTheory.setValue(
-            self.c_view.ui.dblSpinBoxServiceReqMuInt.value())
-        self.c_view.ui.dblSpinBoxResultsLoadTheory.setValue(
-            self.c_view.ui.dblSpinBoxSrcReqLambdaInt.value() / self.c_view.ui.dblSpinBoxServiceReqMuInt.value())
+        pass
+        # self.c_view.ui.dblSpinBoxResultIntensitySrcTheory.setValue(
+        #     self.c_view.ui.dblSpinBoxSrcReqLambdaInt.value())
+        # self.c_view.ui.dblSpinBoxResultsIntensityServiceTheory.setValue(
+        #     self.c_view.ui.dblSpinBoxServiceReqMuInt.value())
+        # self.c_view.ui.dblSpinBoxResultsLoadTheory.setValue(
+        #     self.c_view.ui.dblSpinBoxSrcReqLambdaInt.value() / self.c_view.ui.dblSpinBoxServiceReqMuInt.value())
 
     def simulate(self):
         self._set_theory_results()

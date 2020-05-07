@@ -198,7 +198,7 @@
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="hLayoutSrcReqLambdaInt" stretch="2,1">
+      <!-- <layout class="QHBoxLayout" name="hLayoutSrcReqLambdaInt" stretch="2,1">
        <item>
         <widget class="QLabel" name="labelSrcReqLambdaInt">
          <property name="text">
@@ -225,7 +225,7 @@
          </property>
         </widget>
        </item>
-      </layout>
+      </layout> -->
      </item>
      <item>
       <layout class="QHBoxLayout" name="hLayoutSrcReqLambdaTime" stretch="2,1">
